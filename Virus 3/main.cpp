@@ -1,4 +1,4 @@
-// MURATORE TRISTAN 20443557
+// MURATORE TRISTAN 20443557 https://github.com/ohhopi/COMP-3623-Assignment-1
 #include <iostream>
 #include <fstream>
 using namespace std;
@@ -9,7 +9,7 @@ int naughtyClass(char **argv) {
             "(argv);"
     };
     string me [] = {
-            "// MURATORE TRISTAN 20443557",
+            "// MURATORE TRISTAN 20443557 https://github.com/ohhopi/COMP-3623-Assignment-1",
             "#include <iostream>",
             "#include <fstream>",
             "using namespace std;", //3

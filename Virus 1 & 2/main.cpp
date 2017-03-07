@@ -1,10 +1,10 @@
-// MURATORE TRISTAN 20443557 Quine
+// MURATORE TRISTAN 20443557 Quine https://github.com/ohhopi/COMP-3623-Assignment-1
 #include <iostream>
 #include <fstream>
 using namespace std;
 int main(int argc, char** argv) {
     string me[] = {
-"// MURATORE TRISTAN 20443557 Quine",
+"// MURATORE TRISTAN 20443557 Quine https://github.com/ohhopi/COMP-3623-Assignment-1",
 "#include <iostream>",
 "#include <fstream>",
 "using namespace std;",
