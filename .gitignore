@@ -11,3 +11,7 @@
 /**/fabric.properties
 
 /**/cmake-build-debug/
+
+/**/*.aux
+/**/*.log
+/**/*.synctex.gz

@@ -1,0 +1,103 @@
+\title{
+	COMP3632 (16-17 Spring) \\
+	Assignment 1
+	}
+\author{
+        Tristan Muratore - 20443557\\
+      	}
+\date{March 10, 2017}
+
+\documentclass[12pt]{article}
+
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,240mm},
+ left=20mm,
+ top=25mm,
+ }
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Tristan Muratore - 20443557}
+\rhead{\thepage/2}
+\cfoot{COMP3632 (16-17 Spring) - Assignment 1}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\begin{document}
+\maketitle
+
+\section*{Written assignment}
+\begin{enumerate}
+	\item \textbf{OnePass}
+		\begin{enumerate}
+			\item 
+			\begin{itemize}
+			\item \textbf{System :} The OnePass password management system.
+			\item \textbf{Asset :} Customer's Passwords.
+			\item \textbf{Vulnerability :} The Master password for the OnePass account giving acess to all other passwords.
+			\item \textbf{Attack :} Brute force guessing the Master password.
+			\item \textbf{System :} Enabling 2-Factor-Authentication \textit{(or don't use OnePass)}.
+			\end{itemize}
+			\item Let's start of by finding the SLE. The asset value is 60\$ (5\$ per month), and the exposure factor is 10\%. \textbf{So SLE is expected to be 6\$}. \\
+			\hspace*{1cm} Now onto ALE, the annualized rate of occurence is 1000 (10\% of their 10,000 clients). So \textbf{ALE is expected to be 6000\$} (SLE*1000). \\
+			\hspace*{1cm} Since ALE is greater than the cost to implement 2FA (3000\$), in terms of Quantitative Risk Analysis, 2FA \textbf{it is worth investing in 2FA}.
+			\item If the hacked clients sue OnePass for failing to protect their private information, the payout or the legal fees should also be taken into account as financial damage.
+		\end{enumerate}
+		\item \textbf{Stories about malware}
+		\begin{enumerate}
+			\item \textbf{Sundown Malware}
+			\begin{enumerate}
+				\item Since BitCoin mining is a CPU-intensive activity, the victim computer must be significantly slowed down. Therefore the \textbf{Availability} of the system is violated.
+				\item The Sundown malware is a \textbf{Trojan}, since the JavaScript code on the infected website tricks the user into installing the malicious code. One could argue that it is by effect on the system, a \textbf{Botnet}, since it's takes control of the computer forcing it to mine BitCoin.
+			\end{enumerate}
+			\item \textbf{Mirai IoT DDoS}
+			\begin{enumerate}
+				\item The DDoS on Brian Krebs' blog will render the website un-joinable. The \textbf{Availability} of his webpage is compromised.
+				\item Since the Mirai malware takes control of IoT nodes with weak security, it is a \textbf{Botnet} by effect. Since it spreads over the network, by method of spread it is a \textbf{worm}.
+			\end{enumerate}
+			\item \textbf{Angler exploit kit}
+			\begin{enumerate}
+				\item Since it is used to steal personal information it violates \textbf{Confidentiality}. It also modifies legitimate websites to spread so \textbf{Integrity} is also violated.
+				\item Since this is an exploit kit, it's is very versatile. It can act as a \textbf{Virus} spreading malware on a computer, it can spread through the network so it can be classified as a \textbf{Worm}. It can access all sorts of personal information on the infected hosts, using \textbf{Spyware} or \textbf{Keylogging}. If the attackers desires so, it can also take control of a network of computers, thus forming a \textbf{Botnet}.
+			\end{enumerate}
+		\end{enumerate}
+		\item \textbf{Saltzer and Schroeder's Principles of Secure Design}
+			\begin{enumerate}
+			\item \textbf{Economy of Mechanism}
+				\begin{enumerate}
+					\item Make the system as simple as possible, so that it is easier to understand.
+					\item Example
+				\end{enumerate}
+			\item \textbf{Least Privilege}
+				\begin{enumerate}
+					\item Don't give useless extra permissions to a subject, give it only what it needs.
+					\item Example
+				\end{enumerate}
+			\item \textbf{Separation of Privileges}
+				\begin{enumerate}
+					\item Depending on what each subject desires to do, he should be able to get the appropriate privileges individually/by group.
+					\item Example
+				\end{enumerate}
+			\item \textbf{Fail-safe defaults}
+				\begin{enumerate}
+					\item When there is an unexpected state/error, the subject should go back to a secure default.
+					\item Example
+				\end{enumerate}
+			\item \textbf{Open Design}
+				\begin{enumerate}
+					\item Open the design of the system to everyone, to show that you have nothing to hide, or that they can help correct vulnerabilities.
+					\item Example
+				\end{enumerate}
+		\end{enumerate}		
+\end{enumerate}
+
+\section*{Programming assignment}
+\subsection*{Viruses}
+\begin{enumerate}[label=(\alph*)]
+	\setcounter{enumi}{3}
+ 	\item Since my code does not rely on anything random in it's content and in it's actions. A virus scanner could very easily catch my virus either by \textbf{signature} or \textbf{behavior}. To remove my virus it would be quite simple. Since most of my code is tucked in a separate class \textit{"naughtyClass"}, one could clean the file by removing the class and it's call in \textit{"main"}. (Some extra cleaning might need to be done to the library imports at the beginning of the file). \par
+\end{enumerate}
+
+\end{document}
